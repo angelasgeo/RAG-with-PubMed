@@ -1,4 +1,5 @@
-# RAG-with-PubMed
+# Beyond Retrieval: Improving Biomedical QA with Case-Based Reasoning (CBR) and RAG
+This project implements a Retrieval-Augmented Generation (RAG) pipeline for biomedical question answering using PubMed literature. The system retrieves relevant research articles and uses a Large Language Model (LLM) to generate accurate, context-aware answers.
 
-## PubMedQA_CBR_RAG_Gemma_Evaluation.ipynb
-This notebook evaluates Gemma on the PubMedQA biomedical question-answering task using multiple approaches: No RAG, Keyword RAG, Semantic RAG, and Case-Based Reasoning RAG. It retrieves PubMed evidence, uses similar past PubMedQA cases for CBR, generates yes/no/maybe predictions, and reports classification metrics, retrieval metrics, and error analysis.
+## Files Description
+- 

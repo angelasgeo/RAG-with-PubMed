@@ -1,0 +1,5 @@
+faiss==1.5.3
+numpy==2.4.4
+Requests==2.33.1
+sentence_transformers==5.4.1
+tqdm==4.67.3

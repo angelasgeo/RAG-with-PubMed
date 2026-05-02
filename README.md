@@ -44,7 +44,6 @@ The `PubMedQA_CBR_RAG_Gemma.ipynb` notebook implements the full retrieval‑augm
 
 1. **Retrieve candidate documents.**  The notebook uses functions from `cbr_retrieval.py` to fetch the top‑k relevant abstracts for each question (keyword and/or semantic retrieval).  It also retrieves similar Q&A examples to support case‑based reasoning.
 2. **Generate answers.**  The retrieved context and case examples are fed into the Gemma LLM via API.  Ensure your Gemma API key is available in the environment or set in the notebook.
-3. **Evaluate.**  The notebook computes metrics such as accuracy, nDCG and Kendall’s Tau on the generated answers.
 
 To reproduce these results, open the notebook and run all cells.  Make sure the necessary external services (e.g. Gemma API) are configured.
 

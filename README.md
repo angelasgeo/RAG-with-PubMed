@@ -5,10 +5,10 @@ This repository contains the code and data used to explore retrieval‑augmented
 ## Repository layout
 
 - **`dataset/`** – Folder containing the PubMedQA dataset splits (e.g. `train.jsonl`, `dev.jsonl`, `test.jsonl`). These files include questions, candidate answers and ground‑truth labels.
-- **`graph_construction.ipynb`** – Jupyter notebook used to build and visualise the biomedical knowledge graph. It reads the dataset, extracts biomedical entities and relations and constructs a medical graph using functions from `build_medical_graph.py`. This notebook was previously named `NLP_(1).ipynb` and has been renamed to better reflect its purpose.
+- **`Graph_RAG.ipynb`** – Jupyter notebook used to build and visualise the biomedical knowledge graph. It reads the dataset, extracts biomedical entities and relations and constructs a medical graph using functions from `build_medical_graph.py`. This notebook was previously named `NLP_(1).ipynb` and has been renamed to better reflect its purpose.
 - **`PubMedBERT_SOTA.ipynb`** – Notebook implementing a baseline question‑answering model using the PubMedBERT transformer. It serves as a non‑RAG benchmark for comparison.
 - **`PubMedQA_CBR_RAG_Gemma.ipynb`** – Notebook that implements a case‑based reasoning (CBR) retrieval‑augmented generation pipeline using the Gemma large language model. It retrieves similar Q&A pairs from the case base (`cbr_retrieval.py`) and uses them, along with retrieved documents, to condition the LLM.
-- **`build_medical_graph.py`** – Python script with helper functions to build a Neo4j‑compatible medical knowledge graph from PubMed abstracts. It is imported by `graph_construction.ipynb` and can be run as a stand‑alone script.
+- **`build_medical_graph.py`** – Python script with helper functions to build a Neo4j‑compatible medical knowledge graph from PubMed abstracts. It is imported by `Graph_RAG.ipynb` and can be run as a stand‑alone script.
 - **`cbr_retrieval.py`** – Helper functions for retrieving similar cases and documents for the CBR‑RAG pipeline. This script encapsulates retrieval logic used by the RAG notebooks.
 - **`requirements.txt`** – List of Python dependencies required to run the notebooks and scripts. See the “Setup” section below for installation instructions.
 
@@ -25,9 +25,9 @@ This repository contains the code and data used to explore retrieval‑augmented
 ## Running Experiments
 
 1. **Building the knowledge graph**
-The knowledge‑graph construction code lives in `graph_construction.ipynb` and `build_medical_graph.py`.  To build and inspect the graph:
+The knowledge‑graph construction code lives in `Graph_RAG.ipynb` and `build_medical_graph.py`.  To build and inspect the graph:
 
-  1. Start a Jupyter notebook server and open `graph_construction.ipynb`.
+  1. Start a Jupyter notebook server and open `Graph_RAG.ipynb`.
   2. Run all cells.  The notebook loads the dataset, extracts entities and relations and uses `build_medical_graph.py` to populate a Neo4j database. Adjust the connection URI and credentials at the top of the notebook if your Neo4j instance is not running on the default port.
 
 2. **Training and evaluating a baseline QA model**
